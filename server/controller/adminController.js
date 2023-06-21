@@ -7,6 +7,36 @@ import Notice from "../models/notice.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 
+
+//@desc Register Admin
+//@route POST /api/v1/admins/register
+//@access Private
+export const registerAdmCtrl = async (req,res) => {
+  const {name, email, password, username} = req.body;
+
+      // check if admin already exists
+      const adminFound = await Admin.findOne({email});
+      if(adminFound) {
+          res.json("Admin Exists");
+      }
+
+    const salt = await bcrypt.genSalt(10);
+    // const hashedPassword = await bcrypt.hash(password, salt);
+      //register
+      const user = await Admin.create({
+          name, 
+          email,
+          username,
+          password: await bcrypt.hash(password, salt),
+      });
+      res.status(201).json({
+          status: "success",
+          data: user,
+          message: "Admin Resgistered Successfully"
+      })
+    
+  } 
+
 export const adminLogin = async (req, res) => {
   const { username, password } = req.body;
   const errors = { usernameError: String, passwordError: String };
@@ -128,7 +158,7 @@ export const addAdmin = async (req, res) => {
     var date = new Date();
     var components = ["ADM", date.getFullYear(), departmentHelper, helper];
 
-    var username = components.join("");
+    var username = email;
     let hashedPassword;
     const newDob = dob.split("-").reverse().join("-");
 
@@ -259,7 +289,7 @@ export const addFaculty = async (req, res) => {
     var date = new Date();
     var components = ["FAC", date.getFullYear(), departmentHelper, helper];
 
-    var username = components.join("");
+    var username = email;
     let hashedPassword;
     const newDob = dob.split("-").reverse().join("-");
 
@@ -521,7 +551,7 @@ export const addStudent = async (req, res) => {
     var date = new Date();
     var components = ["STU", date.getFullYear(), departmentHelper, helper];
 
-    var username = components.join("");
+    var username = email;
     let hashedPassword;
     const newDob = dob.split("-").reverse().join("-");
 

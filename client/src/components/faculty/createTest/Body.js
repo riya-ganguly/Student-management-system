@@ -184,7 +184,7 @@ const Body = () => {
                     }>
                     <MenuItem value="">None</MenuItem>
                     <MenuItem value="1">1</MenuItem>
-                    <MenuItem value="2">2</MenuItem>
+                    <MenuItem value="3">2</MenuItem>
                     <MenuItem value="3">3</MenuItem>
                   </Select>
                 </div>

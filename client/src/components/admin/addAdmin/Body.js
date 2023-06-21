@@ -155,7 +155,7 @@ const Body = () => {
                   />
                 </div>
                 <div className={classes.adminForm3}>
-                  <h1 className={classes.adminLabel}>Avatar :</h1>
+                  <h1 className={classes.adminLabel}>Profile Image :</h1>
 
                   <FileBase
                     type="file"

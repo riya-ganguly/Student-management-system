@@ -5,6 +5,7 @@ import { addDepartment } from "../../../redux/actions/adminActions";
 import Spinner from "../../../utils/Spinner";
 import { ADD_DEPARTMENT, SET_ERRORS } from "../../../redux/actionTypes";
 import * as classes from "../../../utils/styles";
+import AddDepartment from './AddDepartment';
 const Body = () => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
@@ -47,7 +48,7 @@ const Body = () => {
       <div className="space-y-5">
         <div className="flex text-gray-400 items-center space-x-2">
           <AddIcon />
-          <h1>Add Subject</h1>
+          <h1>Add Department</h1>
         </div>
         <div className=" mr-10 bg-white flex flex-col rounded-xl ">
           <form className={classes.adminForm0} onSubmit={handleSubmit}>

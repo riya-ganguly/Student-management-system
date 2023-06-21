@@ -10,6 +10,7 @@ import Spinner from "../../../utils/Spinner";
 import * as classes from "../../../utils/styles";
 import MenuItem from "@mui/material/MenuItem";
 import { DELETE_DEPARTMENT, SET_ERRORS } from "../../../redux/actionTypes";
+import DeleteDepartment from './DeleteDepartment';
 const Body = () => {
   const dispatch = useDispatch();
   const [department, setDepartment] = useState("");
@@ -58,7 +59,7 @@ const Body = () => {
       <div className="space-y-5">
         <div className="flex text-gray-400 items-center space-x-2">
           <EngineeringIcon />
-          <h1>All Faculty</h1>
+          <h1>Delete Department</h1>
         </div>
         <div className=" mr-10 bg-white grid grid-cols-4 rounded-xl pt-6 pl-6 h-[29.5rem]">
           <form

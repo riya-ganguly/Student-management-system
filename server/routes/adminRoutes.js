@@ -25,9 +25,12 @@ import {
   deleteSubject,
   createNotice,
   getNotice,
+  registerAdmCtrl,
 } from "../controller/adminController.js";
+
 const router = express.Router();
 
+router.post('/register', registerAdmCtrl);
 router.post("/login", adminLogin);
 router.post("/updatepassword", auth, updatedPassword);
 router.get("/getallstudent", auth, getAllStudent);

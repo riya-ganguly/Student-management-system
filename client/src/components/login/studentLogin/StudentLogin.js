@@ -44,10 +44,15 @@ const StudentLogin = () => {
     }
   }, [store.errors]);
   return (
-    <div className="bg-[#d65158] h-screen w-screen flex items-center justify-center">
+    <div className="bg-[#d65158] h-screen w-screen flex items-center justify-center"
+      style={{
+        backgroundImage: `url(https://imageio.forbes.com/specials-images/imageserve/5e020def4e2917000783d582/Multi-ethnic-students-sitting-at-college-library/960x0.jpg?format=jpg&width=960)`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",}}>
       <div className="grid grid-cols-2">
         <div
-          className={`h-96 w-96 bg-white flex items-center justify-center ${
+          className={`h-96 w-96 bg-lime-400 flex items-center justify-center ${
             translate ? "translate-x-[12rem]" : ""
           }  duration-1000 transition-all rounded-3xl shadow-2xl`}>
           <h1 className="text-[3rem]  font-bold text-center">

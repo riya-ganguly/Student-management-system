@@ -42,10 +42,16 @@ const AdminLogin = () => {
     }
   }, [store.errors]);
   return (
-    <div className="bg-[#04bd7d] h-screen w-screen flex items-center justify-center">
+    <div className="bg-[#04bd7d] h-screen w-screen flex items-center justify-center"style={{
+      backgroundImage: `url(https://uploads-ssl.webflow.com/5fae79706d8334674145afcd/60d0f685e4661743bd213cb3_Effective-school-administration-supports-databased-decision-making_896_6065058_0_14102171_1000-p-800.jpeg)`,
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      }}
+    >
       <div className="grid grid-cols-2">
         <div
-          className={`h-96 w-96 bg-white flex items-center justify-center ${
+          className={`h-96 w-96 bg-lime-400 flex items-center justify-center ${
             translate ? "translate-x-[12rem]" : ""
           }  duration-1000 transition-all rounded-3xl shadow-2xl`}>
           <h1 className="text-[3rem]  font-bold text-center">

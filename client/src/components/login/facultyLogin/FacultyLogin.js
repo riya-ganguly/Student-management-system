@@ -45,10 +45,14 @@ const FacultyLogin = () => {
     }
   }, [store.errors]);
   return (
-    <div className="bg-[#5a51d6] h-screen w-screen flex items-center justify-center">
+    <div className="bg-[#5a51d6] h-screen w-screen flex items-center justify-center"style={{
+      backgroundImage: `url(https://study-eu.s3.amazonaws.com/uploads/image/path/684/wide_fullhd_study-education-teaching.jpg)`,
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      backgroundSize: "cover",}}>
       <div className="grid grid-cols-2">
         <div
-          className={`h-96 w-96 bg-white flex items-center justify-center ${
+          className={`h-96 w-96 bg-lime-400 flex items-center justify-center ${
             translate ? "translate-x-[12rem]" : ""
           }  duration-1000 transition-all rounded-3xl shadow-2xl`}>
           <h1 className="text-[3rem]  font-bold text-center">
