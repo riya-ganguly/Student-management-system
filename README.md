@@ -5,7 +5,6 @@ College ERP using MERN Stack
 # TechStack
 
 1. Reactjs
-2. Tailwind CSS
 3. MongoDB
 4. Express.js
 5. Redux
